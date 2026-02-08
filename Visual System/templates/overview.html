@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>System Overview</title>
+    <link rel="stylesheet" href="../Static/style.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">Visual Perception</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="scope.html">Scope</a>
+        <a href="team.html">Team</a>
+    </nav>
+</header>
+<!-- INPUT SECTION -->
+<section class="page">
+    <div class="card">
+        <h1>Input</h1>
+        <br></br>
+        <!-- File Upload -->
+        <input type="file" id="imageInput" accept="image/*"><br><br>
+
+        <p><b>OR</b></p>
+
+        <!-- Camera -->
+        <div class="box">
+            <video id="camera" autoplay></video>
+        </div>
+
+        <button class="btn" onclick="startCamera()">
+            <i class="fa fa-camera"></i> Start Camera
+        </button>
+        
+        <button class="btn" onclick="captureImage()">
+            <i class="fa fa-circle-dot"></i> Capture Image
+        </button>
+        
+        <br><br>
+
+        <!-- NEW BUTTONS -->
+        <button class="btn" onclick="analyzeImage()">
+            <i class="fa fa-brain"></i> Analyze Image
+        </button>
+        
+        <button class="btn btn-danger" onclick="clearAll()">
+            <i class="fa fa-trash"></i> Clear
+        </button>
+    </div>
+</section>
+<!-- OUTPUT SECTION -->
+<section class="page">
+    <div class="card">
+        <h1>Output</h1>
+
+        <div class="box" id="outputBox">
+            <ul id="detectedList">
+                <li>Detected Objects will appear here</li>
+            </ul>
+        </div>
+
+        <h2 id="caption">Caption will appear here</h2>
+
+        <button class="btn" onclick="speakCaption()">
+            <i class="fa fa-volume-up"></i> Speak Caption
+        </button>
+    </div>
+</section>
+<canvas id="canvas" width="360" height="220" style="display:none;"></canvas>
+<script src="../Static/script.js"></script>
+</body>
+</html>

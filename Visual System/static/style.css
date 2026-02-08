@@ -1,0 +1,446 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background: #b4ebeb;
+}
+
+/* NAVBAR */
+.navbar {
+    background: white;
+    height: 66px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.navbar nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #374151;
+}
+
+.navbar nav a:hover {
+    color: #2564eb;
+}
+/* ===========================
+   HOME PAGE ONLY STYLES
+   =========================== */
+
+/* Home hero alignment */
+.hero {
+    height: calc(100vh - 70px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Home card spacing & look */
+.hero .card {
+    max-width: 900px;
+    padding: 60px 70px;
+    border-radius: 18px;
+    background:white;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+/* Home title */
+.hero .card h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 20px;
+}
+
+/* Home subtitle */
+.hero .card p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #374151;
+    margin-bottom: 35px;
+}
+
+/* Home button */
+.hero .card .btn {
+    padding: 15px 38px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 10px;
+}
+
+
+/* HERO */
+.hero {
+    height: calc(100vh - 66px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* PAGE */
+.page {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+.btn-danger {
+    background: #dc2626;
+}
+
+.btn-danger:hover {
+    background: #991b1b;
+}
+button i {
+    margin-right: 8px;
+}
+
+
+/* CARD */
+.card {
+    width: 90%;
+    max-width: 850px;
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(216, 213, 213, 0.945);
+}
+#outputCanvas {
+    border-radius: 8px;
+}
+
+/* BOX */
+.box {
+    width: 360px;
+    height: 220px;
+    border: 3px dashed #22c55e;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#detectedList {
+    list-style: none;
+    font-size: 18px;
+    color: #16a34a;
+    font-weight: 600;
+}
+
+#detectedList li::before {
+    content: "✔ ";
+    color: #22c55e;
+}
+.box video,
+.box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* BUTTON */
+.btn {
+    padding: 14px 32px;
+    background: #1f2937;
+    color:white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.btn:hover {
+    background: #111827;
+}
+/* HOME PAGE HERO WITHOUT WHITE CARD */
+/* =========================
+   HOME PAGE ANIMATED GRADIENT
+   ========================= */
+
+   .hero-home {
+    min-height: calc(100vh - 66px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+
+    /* Animated Gradient */
+    background: linear-gradient(
+        -45deg,
+        #a5f3fc,
+        #67e8f9,
+        #5eead4,
+        #99f6e4
+    );
+    background-size: 400% 400%;
+    animation: gradientMove 12s ease infinite;
+}
+
+/* Gradient Animation */
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* HOME TEXT */
+.hero-home .hero-content {
+    max-width: 900px;
+    color: #0f172a;
+}
+
+.hero-home h1 {
+    font-size: 44px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.hero-home p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #1e293b;
+}
+
+/* CTA Button */
+.hero-btn {
+    padding: 14px 36px;
+    font-size: 16px;
+}
+
+/* ===========================
+   SCOPE PAGE STYLES
+   =========================== */
+
+.scope-container {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+/* TITLE */
+.scope-title {
+    font-size: 34px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* DESCRIPTION */
+.scope-desc {
+    font-size: 16px;
+    color: #475569;
+    line-height: 1.8;
+    max-width: 900px;
+    margin-bottom: 45px;
+}
+
+/* CARD */
+.scope-card {
+    background: white;
+    border-radius: 16px;
+    padding: 30px 35px;
+    margin-bottom: 25px;
+    position: relative;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+/* LEFT ACCENT LINE */
+.scope-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(180deg, #2563eb, #38bdf8);
+}
+
+/* HOVER EFFECT */
+.scope-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.15);
+}
+
+/* CONTENT */
+.scope-content h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 10px;
+}
+
+.scope-content p {
+    font-size: 15.5px;
+    color: #475569;
+    line-height: 1.75;
+}
+/* =========================
+   SCROLL REVEAL ANIMATION
+   ========================= */
+
+   .reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===========================
+   TEAM PAGE STYLES
+   =========================== */
+
+   .team-container {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 30px;
+}
+
+.team-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin-bottom: 40px;
+}
+
+/* GRID */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+}
+
+/* CARD */
+.team-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    border-top: 4px solid #2563eb;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+}
+
+.team-card h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #111827;
+}
+
+.team-card p {
+    font-size: 14px;
+    color: #4b5563;
+}
+
+/* BADGE */
+.team-badge {
+    display: inline-block;
+    font-size: 13px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    background: #e0f2fe;
+    color: #0369a1;
+    margin-bottom: 18px;
+    font-weight: 500;
+}
+/* =========================
+   ABOUT PAGE STYLES
+   ========================= */
+
+   /* ABOUT PAGE */
+.about-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.about-title {
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #0f172a;
+}
+
+.about-subtitle {
+    text-align: center;
+    color: #475569;
+    margin-bottom: 50px;
+    font-size: 18px;
+}
+
+.about-card {
+    background: white;
+    padding: 35px 40px;
+    margin-bottom: 30px;
+    border-radius: 16px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.about-card h2 {
+    margin-bottom: 16px;
+    color: #1e293b;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.about-card p {
+    color: #334155;
+    line-height: 1.8;
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+/* TECH LIST */
+.tech-list {
+    list-style: none;
+    padding: 0;
+}
+
+.tech-list li {
+    margin-bottom: 12px;
+    color: #334155;
+    font-size: 16px;
+}
+
+.tech-list li i {
+    color: #2563eb;
+    margin-right: 8px;
+}
